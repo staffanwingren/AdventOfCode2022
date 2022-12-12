@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6-tuning_trouble", "6-tunin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7-no_space_left_on_device", "7-no_space_left_on_device\7-no_space_left_on_device.csproj", "{0E1C50E6-FA63-44B3-AF50-17EBA97A76E2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8-tree_top_tree_house", "8-tree_top_tree_house\8-tree_top_tree_house.csproj", "{363CA8D6-4BCE-4439-B4EC-5207EC98E4BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9-rope_bridge", "9-rope_bridge\9-rope_bridge.csproj", "{FA46A117-2B0F-48C5-9E63-04F1587CA98C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,5 +58,13 @@ Global
 		{0E1C50E6-FA63-44B3-AF50-17EBA97A76E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E1C50E6-FA63-44B3-AF50-17EBA97A76E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E1C50E6-FA63-44B3-AF50-17EBA97A76E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{363CA8D6-4BCE-4439-B4EC-5207EC98E4BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{363CA8D6-4BCE-4439-B4EC-5207EC98E4BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{363CA8D6-4BCE-4439-B4EC-5207EC98E4BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{363CA8D6-4BCE-4439-B4EC-5207EC98E4BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA46A117-2B0F-48C5-9E63-04F1587CA98C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA46A117-2B0F-48C5-9E63-04F1587CA98C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA46A117-2B0F-48C5-9E63-04F1587CA98C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA46A117-2B0F-48C5-9E63-04F1587CA98C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
