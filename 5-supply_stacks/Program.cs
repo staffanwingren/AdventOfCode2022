@@ -1,5 +1,8 @@
 // See https://aka.ms/new-console-template for more information
-var input = File.ReadLines(args[0]);
+using AoC.Common;
+
+var filename = args.Index(0)!.Or("./input.txt");
+var input = File.ReadLines(filename);
 var stacks = input.ExtractStacksSection().ParseStacks();
 var instructions = input.ExtractInstructionsSection().ParseInstructions();
 Console.WriteLine($"Top view before CrateMover9000 is '{stacks.ViewTop()}'");

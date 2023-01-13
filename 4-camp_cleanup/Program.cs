@@ -1,5 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
-var lines = File.ReadLines(args[0]).ToArray();
+using AoC.Common;
+
+var filename = args.Index(0)!.Or("./input.txt");
+var lines = File.ReadLines(filename).ToArray();
 var numberOfContainedPairs = lines.NumberOfContainedPairs();
 Console.WriteLine($"The number of contained pairs are {numberOfContainedPairs}");
 var numberOfOverlappingPairs = lines.NumberOfOverlappingPairs();

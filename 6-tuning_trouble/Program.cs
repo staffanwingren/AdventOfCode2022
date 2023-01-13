@@ -1,4 +1,7 @@
-﻿var input = File.ReadAllText(args[0]);
+﻿using AoC.Common;
+
+var filename = args.Index(0)!.Or("./input.txt");
+var input = File.ReadAllText(filename);
 Console.WriteLine($"The start-of-packet is a position {input.FindStartOfPacket()}");
 Console.WriteLine($"The start-of-message is a position {input.FindStartOfMessage()}");
 

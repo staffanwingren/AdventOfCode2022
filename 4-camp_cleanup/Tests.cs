@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace _4_camp_cleanup;
+namespace AoC.CampCleanup;
 
 [TestFixture]
 public class Tests

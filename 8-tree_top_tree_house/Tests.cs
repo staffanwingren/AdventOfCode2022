@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace _8_tree_top_tree_house;
+namespace AoC.TreeTopTreeHouse;
 
 [TestFixture]
 public class Tests

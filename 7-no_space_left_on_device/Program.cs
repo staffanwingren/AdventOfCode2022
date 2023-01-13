@@ -1,11 +1,13 @@
 ﻿using System.Text.RegularExpressions;
+using AoC.Common;
 
-var input = File.ReadLines(args[0]);
+var filename = args.Index(0)!.Or("./input.txt");
+var input = File.ReadLines(filename);
 var root = input.GenerateTree();
 var sizeOfSmallDirs = root.Iter().Where(d => d.Size <= 100000).Sum(d => d.Size);
 Console.WriteLine($"Sum of all dirs smaller than 100000 is {sizeOfSmallDirs}");
 var dirToDelete = root.FindDirToFreeUpSpace();
-Console.WriteLine($"Deleting {dirToDelete.Name} would free up {dirToDelete.Size}");
+Console.WriteLine($"Deleting {dirToDelete?.Name} would free up {dirToDelete?.Size}");
 
 public static class Helpers
 {
@@ -15,7 +17,7 @@ public static class Helpers
     public static readonly Regex ListCommand = new Regex("\\$ ls");
     public static readonly Regex FileNode = new Regex("(\\d+) (.+)");
     public static readonly Regex DirNode = new Regex("dir (.+)");
-    
+
     public static DirNode GenerateTree(this IEnumerable<string> input)
     {
         var cd = new DirNode("/");
@@ -28,7 +30,7 @@ public static class Helpers
                 var nav = navigation.Groups[1];
                 if (nav.Value.Equals(".."))
                 {
-                    cd = cd.Parent;
+                    cd = cd!.Parent;
                 }
                 else if (nav.Value.StartsWith('/'))
                 {
@@ -36,7 +38,7 @@ public static class Helpers
                 }
                 else
                 {
-                    cd = cd.GetChild(nav.Value);
+                    cd = cd!.GetChild(nav.Value);
                 }
             }
 
@@ -51,21 +53,21 @@ public static class Helpers
             {
                 var size = int.Parse(file.Groups[1].Value);
                 var fileName = file.Groups[2].Value;
-                cd.AddFile(new FileNode(size, fileName, cd));
+                cd!.AddFile(new FileNode(size, fileName, cd));
             }
 
             var dir = DirNode.Match(line);
             if (dir.Success)
             {
                 var dirName = dir.Groups[1].Value;
-                cd.AddDir(new DirNode(dirName, cd));
+                cd!.AddDir(new DirNode(dirName, cd));
             }
         }
 
         return root;
     }
 
-    public static DirNode FindDirToFreeUpSpace(this DirNode root, int requirement = Requirement, int diskSpace = DiskSize)
+    public static DirNode? FindDirToFreeUpSpace(this DirNode root, int requirement = Requirement, int diskSpace = DiskSize)
     {
         var delta = diskSpace - root.Size - requirement;
         if (int.IsPositive(delta))
@@ -88,7 +90,7 @@ public interface INode
     int Size { get; }
     string Name { get; }
     NodeType Type { get; }
-    DirNode Parent { get; }
+    DirNode? Parent { get; }
 }
 
 public class DirNode : INode
@@ -96,12 +98,12 @@ public class DirNode : INode
     private List<DirNode> _childDirs;
     private List<FileNode> _childFiles;
     public int Size => _childDirs.Sum(d => d.Size) + _childFiles.Sum(f => f.Size);
-    
+
     public string Name { get; }
     public NodeType Type => NodeType.Dir;
-    public DirNode Parent { get; }
-    
-    public DirNode(string name, DirNode parent = null)
+    public DirNode? Parent { get; }
+
+    public DirNode(string name, DirNode? parent = null)
     {
         _childDirs = new List<DirNode>();
         _childFiles = new List<FileNode>();

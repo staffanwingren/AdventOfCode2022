@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace _7_no_space_left_on_device;
+namespace AoC.NoSpaceLeftOnDevice;
 
 [TestFixture]
 public class Tests
@@ -68,7 +68,7 @@ public class Tests
     public void ShouldReturnTheSmallestDirNeeded()
     {
         var dir = Input.GenerateTree().FindDirToFreeUpSpace();
-        Assert.That(dir.Name, Is.EqualTo("d"));
-        Assert.That(dir.Size, Is.EqualTo(24933642));
+        Assert.That(dir?.Name, Is.EqualTo("d"));
+        Assert.That(dir?.Size, Is.EqualTo(24933642));
     }
 }

@@ -1,7 +1,10 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using AoC.Common;
+
 var total1 = 0;
 var total2 = 0;
-foreach (var line in File.ReadLines(args[0]))
+var filename = args.Index(0)!.Or("./input.txt");
+foreach (var line in File.ReadLines(filename))
 {
     var inputChars = line.Split(' ');
     var opponentHand = inputChars[0].ToHand();

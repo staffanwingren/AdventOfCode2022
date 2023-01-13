@@ -1,5 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
-var input = File.ReadLines(args[0]);
+using AoC.Common;
+
+var filename = args.Index(0)!.Or("./input.txt");
+var input = File.ReadLines(filename);
 var forest = input.ToForest();
 Console.WriteLine($"There are {forest.CountVisibleTrees()} number of visible trees in the forest.");
 Console.WriteLine($"The highest scenic score is {forest.FindHighestScenicScore()}.");

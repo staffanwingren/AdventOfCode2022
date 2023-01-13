@@ -1,6 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using AoC.Common;
 
-var input = File.ReadLines(args[0]).ToArray();
+var filename = args.Index(0)!.Or("./input.txt");
+var input = File.ReadLines(filename).ToArray();
 var rucksackPriority = 0;
 var groupPriority = 0;
 

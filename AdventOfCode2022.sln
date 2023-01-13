@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8-tree_top_tree_house", "8-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9-rope_bridge", "9-rope_bridge\9-rope_bridge.csproj", "{FA46A117-2B0F-48C5-9E63-04F1587CA98C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{1D7C500C-A4A9-4D53-A013-863B28F98D73}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -66,5 +68,9 @@ Global
 		{FA46A117-2B0F-48C5-9E63-04F1587CA98C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA46A117-2B0F-48C5-9E63-04F1587CA98C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA46A117-2B0F-48C5-9E63-04F1587CA98C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D7C500C-A4A9-4D53-A013-863B28F98D73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D7C500C-A4A9-4D53-A013-863B28F98D73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D7C500C-A4A9-4D53-A013-863B28F98D73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D7C500C-A4A9-4D53-A013-863B28F98D73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace _2_rock_paper_scissors;
+namespace AoC.RockPaperScissors;
 
 [TestFixture]
 public class Tests

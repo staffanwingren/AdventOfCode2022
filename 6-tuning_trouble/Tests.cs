@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace _6_tuning_trouble;
+namespace AoC.TuningTrouble;
 
 [TestFixture]
 public class Tests 

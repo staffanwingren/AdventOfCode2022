@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace _5_supply_stacks;
+namespace Aoc.SupplyStacks;
 
 [TestFixture]
 public class Tests 

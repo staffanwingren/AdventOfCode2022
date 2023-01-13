@@ -1,5 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
-var filename = args[0];
+using AoC.Common;
+
+var filename = args.Index(0)!.Or("input.txt");
 var current = 0;
 var currentElf = 1;
 var highScore = new Dictionary<int, int>();
